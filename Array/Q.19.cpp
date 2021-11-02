@@ -1,4 +1,4 @@
-// Median of two sorted arrays
+// Median of two sorted arrays of equal size
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -50,20 +50,20 @@ int sorted_median(int arr1[], int n, int arr2[])
 
     vector<int> v1(ArrayUnion(arr1, n, arr2));
     sort(v1.begin(), v1.end());
-     int med;
-     int m = v1.size();
+    int med;
+    int m = v1.size();
     if (m % 2 == 0)
         med = (v1[m / 2] + v1[m / 2 - 1]) / 2;
     else
-        med = v1[(m- 1) / 2];
+        med = v1[(m - 1) / 2];
 
     return med;
 }
 
 int main()
 {
-     int arr1[] ={1,12,15,26,38};
+    int arr1[] = {1, 12, 15, 26, 38};
     int n = sizeof(arr1) / sizeof(arr1[0]);
-    int arr2[] = {2,13,17,30,45};
+    int arr2[] = {2, 13, 17, 30, 45};
     cout << sorted_median(arr1, n, arr2) << endl;
 }
