@@ -50,7 +50,7 @@ vector<int> ArrayUnion(int arr1[], int n1, int arr2[], int n2)
         }
         else
         {
-            v.push_back(arr2[i]);
+            v.push_back(arr2[j]);
             j++;
         }
     }
