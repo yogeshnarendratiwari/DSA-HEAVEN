@@ -7,22 +7,18 @@ using namespace std;
 
 int median(vector<vector<int>> v, int r, int c)
 {
-}
-vector <int> sort2D(vector<vector<int>> v, int r, int c){
-    vector <int> v1;
-    int s = v[0][0];
-    v1.push_back(s);
-    for (int i = 0; i < 3; i++)
+    vector <int> matrix;
+  for (int i = 0; i < r; i++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < c; j++)
         {
-            if(s<v[i][j])
-            s=v[i][j];
-            
+            matrix.push_back(v[i][j]);
         }
-        v1.push_back(s);
+        
     }
-    return v1;
+    sort(matrix.begin(),matrix.end());
+    int n = matrix.size();
+    return matrix[(n-1)/2];
 }
 
 int main()
@@ -41,12 +37,6 @@ int main()
         x.clear();
     }
 
-    vector<int> v3(sort2D(v,3,3));
-
-    for (int i = 0; i < v3.size(); i++)
-    {
-            cout << v3[i] << " ";
-        
-       
-    }
+cout<<median(v,3,3)<<endl;
+   
 }
