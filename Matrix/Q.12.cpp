@@ -7,7 +7,6 @@ using namespace std;
 
 
 void common(vector<vector<int>> v , int R,int C){
-
 map <int,int> m;
 for (int i = 0; i < R; i++)
     {
@@ -17,14 +16,11 @@ for (int i = 0; i < R; i++)
         }
         
     }
-  
   for(auto x : m){
    if(x.second > R){
        cout<<x.first<<" ";
    }
   }
-   
-
 }
 
 
