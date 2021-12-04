@@ -21,7 +21,7 @@ void ReverseIt(string name){
 
 int main(){
 
-string s = "Yogesh";
+string s = "Hello World";
 // we have to get hsegoY
 ReverseIt(s);
 
