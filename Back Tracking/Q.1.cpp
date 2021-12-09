@@ -1,5 +1,5 @@
 // K th Permutation
-
+// Time complexity --> n*n!
 #include <iostream>
 using namespace std;
 
